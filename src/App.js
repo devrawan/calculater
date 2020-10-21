@@ -62,9 +62,7 @@ class App extends Component {
     if (this.quationn.length - 1 == this.operatorIndex) {
       return;
     }
-    // if (operator == "=" && this.operator == null){
-    //   return;
-    // }
+  
     if (this.operator == null) {
       this.operator = operator;
       this.quationn = this.quationn + "" + operator;
@@ -74,7 +72,6 @@ class App extends Component {
       return;
     }
     // TODO get num1 , num2 , 
-    console.log("operator: " + this.operator);
     var num1 = this.quationn.substr(0, this.quationn.indexOf(this.operator));
     var num2 = this.quationn.substr(this.quationn.indexOf(this.operator) + 1, this.quationn.length);
     var result = this.compute(num1, num2, this.operator);
@@ -120,11 +117,23 @@ class App extends Component {
 
 
         }
-
-
-
         return;
+case "AC":
+  this.quationn = "";
+  this.operator = null;
+  this.setState({
+    value:"0"
+  })
+return ;
+case "%":
+  var numm = parseFloat(this.quationn)
+  numm= (numm / 100).toString()
+  this.setState({
+    value: numm
+  })
+  this.quationn = numm;
 
+return;
       default:
         break;
     }
