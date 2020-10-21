@@ -132,11 +132,9 @@ class App extends Component {
   }
 
   compute = (num1, num2, method) => {
-    console.log("DDDDDDD" + num2);
     num1 = parseFloat(num1);
     num2 = parseFloat(num2);
-    console.log(num1);
-    console.log(num2);
+
     switch (method) {
 
       case "×":
@@ -164,12 +162,12 @@ class App extends Component {
     return (
       <div className="App">
         <div className="cala-wrapper">
-          <div className="display">{this.state.value}</div>
+          <div className="display"> {this.state.value}</div>
           <div className="row">
             <Button onButtonClick={this.handleButtonPress} content="AC" type="function" />
             <Button onButtonClick={this.handleButtonPress} content="±" type="function" />
             <Button onButtonClick={this.handleButtonPress} content="%" type="function" />
-            <Button onButtonClick={this.handleButtonPress} content="4" type="number" />
+            <Button onButtonClick={this.handleButtonPress} content="/" type="operator" />
 
           </div>
           <div className="row">

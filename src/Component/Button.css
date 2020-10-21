@@ -1,18 +1,34 @@
 .button{
-    display: flex;
-    height: 4em;
-    flex:1;
-    justify-content: center;
-    align-items: center;
-    font-weight: lighter;
-    font-size: 1.4em;
-    background-color: #e0e1e6;
-    color: #888;
-   outline: 1px solid #888;
-   cursor: pointer;
+    height: 74px;
+    line-height: 80px;
+    width: 71px;
+    font-size: 2em;
+    font-weight: bold;
+    border-radius: 61%;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    background: #8490FF;
+
+
 }
 
 .operator{
-    background-color: #fe9241;
+    background: #34509E;
     color: #fff;
 }
+
+.number{
+    background: #212638;
+}
+
+.fuction{
+    background-color: #8490FF;
+  
+}
+.zero {
+    width: 164px;
+    border-radius: 80px;
+    min-height: 48px;}
+
+

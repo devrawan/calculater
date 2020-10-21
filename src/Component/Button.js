@@ -8,7 +8,6 @@ class Button extends Component{
     const {type} = this.props;
     return(
       <div className={`button ${content==="0" ? "zero" : ""} ${type || ""}`}   onClick={ () => {
-        // console.log(   {content});
         onButtonClick(  content , type)  
       }} >
     {content}
